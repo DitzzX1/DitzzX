@@ -50,7 +50,7 @@ if (canvas) {
 
             context.beginPath();
             context.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-            context.fillStyle = "rgba(255, 141, 141, 0.48)";
+            context.fillStyle = "rgba(255, 141, 240, 0.48)";
             context.fill();
 
             for (let otherIndex = index + 1; otherIndex < nodes.length; otherIndex += 1) {
