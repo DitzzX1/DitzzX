@@ -9,6 +9,23 @@ window.addEventListener("scroll", updateScrollGlow, { passive: true });
 window.addEventListener("resize", updateScrollGlow);
 updateScrollGlow();
 
+const documentationTopics = {
+    proyek: { label: "Proyek", title: "Dokumentasi Proyek", intro: "Kumpulan proses pengerjaan, hasil, dan catatan dari setiap proyek." },
+    kegiatan: { label: "Kegiatan Sekolah", title: "Dokumentasi Kegiatan Sekolah", intro: "Catatan kegiatan sekolah, kelas, dan organisasi yang diikuti." },
+    praktik: { label: "Praktik", title: "Dokumentasi Praktik", intro: "Kumpulan hasil serta proses praktik Teknik Grafika." },
+    prestasi: { label: "Prestasi & Pelatihan", title: "Dokumentasi Prestasi & Pelatihan", intro: "Sertifikat, pelatihan, dan pencapaian yang telah diperoleh." },
+};
+
+const selectedTopic = new URLSearchParams(window.location.search).get("topik");
+const topicContent = documentationTopics[selectedTopic];
+
+if (topicContent) {
+    document.title = `${topicContent.title} — Aditya Krisma Wardhana`;
+    document.querySelector("#detail-label")?.replaceChildren(topicContent.label);
+    document.querySelector("#detail-title")?.replaceChildren(topicContent.title);
+    document.querySelector("#detail-intro")?.replaceChildren(topicContent.intro);
+}
+
 const canvas = document.querySelector("#background-nodes");
 
 if (canvas) {
