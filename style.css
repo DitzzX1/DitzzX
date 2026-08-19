@@ -18,7 +18,7 @@ html {
 body {
     --scroll-y: 0%;
 
-    min-width: 320px;
+    min-width: 0;
     margin: 0;
     background:
         radial-gradient(
@@ -88,6 +88,7 @@ body > :not(#background-nodes) {
     padding: 10px 18px;
     border: 1px solid var(--line);
     border-radius: 999px;
+    white-space: nowrap;
 }
 
 .navbartext:hover {  
@@ -427,6 +428,7 @@ body > :not(#background-nodes) {
     color: var(--text);
     font-weight: 600;
     line-height: 1.45;
+    overflow-wrap: anywhere;
 }
 
 .bio-data a {
@@ -771,10 +773,6 @@ body > :not(#background-nodes) {
 
 /* Tampilan mobile */
 @media (max-width: 760px) {
-    body {
-        min-width: 0;
-    }
-
     .navbarcon {
         width: min(100% - 40px, 620px);
         padding: 24px 0;
@@ -845,6 +843,7 @@ body > :not(#background-nodes) {
 
     .education-heading {
         flex-direction: column;
+        align-items: flex-start;
         gap: 12px;
     }
 
@@ -877,7 +876,128 @@ body > :not(#background-nodes) {
     .documentation-grid { grid-template-columns: 1fr; }
 
     .documentation-detail__layout { grid-template-columns: 1fr; gap: 36px; }
-    .documentation-media { width: min(100%, 340px); }
+    .documentation-media { width: min(100%, 340px); margin-inline: auto; }
     .documentation-gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .documentation-gallery__grid .documentation-media { width: 100%; }
+}
+
+@media (max-width: 560px) {
+    .navbarcon {
+        align-items: flex-start;
+        gap: 18px;
+    }
+
+    .navbar-actions {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        width: 100%;
+        gap: 8px;
+    }
+
+    .navbar-actions .navbartext {
+        display: flex;
+        min-width: 0;
+        justify-content: center;
+        padding: 10px 6px;
+        font-size: 0.72rem;
+        text-align: center;
+    }
+
+    .sidebar-image {
+        width: min(100%, 250px);
+        height: 210px;
+    }
+
+    .content-column {
+        padding-top: 48px;
+    }
+
+    .content + .content {
+        margin-top: 64px;
+    }
+
+    .content h2,
+    .certificate-page h1,
+    .documentation-page h1,
+    .biodata-page h1 {
+        font-size: clamp(1.9rem, 10vw, 2.5rem);
+    }
+
+    .education-card,
+    .cv-item,
+    .service-card,
+    .bio-data > div {
+        padding: 18px;
+    }
+
+    .certificate-empty {
+        margin-top: 32px;
+        padding: 20px;
+    }
+
+    .documentation-card {
+        min-height: 0;
+        padding: 20px;
+    }
+
+    .documentation-detail__layout {
+        gap: 28px;
+    }
+
+    .documentation-description {
+        margin-top: 24px;
+        padding-top: 22px;
+    }
+}
+
+@media (max-width: 380px) {
+    .navbarcon {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .navbarcon img {
+        width: 120px;
+    }
+
+    .navbartext {
+        padding: 8px 10px;
+        font-size: 0.72rem;
+    }
+
+    .documentation-page {
+        width: calc(100% - 32px);
+        margin: 36px auto 56px;
+    }
+
+    .documentation-gallery__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio,
+    .navbarcon,
+    .footer-content,
+    .certificate-page,
+    .biodata-page,
+    .documentation-page {
+        width: calc(100% - 32px);
+    }
+
+    .navbar-actions .navbartext {
+        padding: 9px 4px;
+        font-size: 0.66rem;
+    }
+
+    .education-card {
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .documentation-card {
+        align-items: flex-start;
+    }
+
+    .documentation-card > i:last-child {
+        display: none;
+    }
 }
