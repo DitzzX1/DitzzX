@@ -1,45 +1,215 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AZAR — Tas serut sablon custom dengan harga ramah pelajar.">
-  <link rel="icon" href="../img/XlogoPortofolio.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>AZAR — Tas Serut Sablon Custom</title>
-</head>
-<body>
-  <canvas id="background-nodes" aria-hidden="true"></canvas>
-  <header class="navbarcon">
-    <a href="#beranda" class="brand-name" aria-label="AZAR beranda">AZAR<span>.</span></a>
-    <nav class="navbar-actions" aria-label="Navigasi utama">
-      <a class="nav-link" href="#tentang">Tentang</a>
-      <a class="nav-link" href="#produk">Produk</a>
-      <a class="nav-link" href="#testimoni">Testimoni</a>
-      <a class="navbartext" href="https://wa.me/62887435013823" target="_blank" rel="noopener">Pesan Sekarang</a>
-    </nav>
-  </header>
-  <main id="beranda">
-    <section class="hero-promo">
-      <div class="hero-promo__content">
-        <p class="eyebrow">Tas serut sablon custom</p>
-        <h1>Bawa gayamu<br>ke mana saja.</h1>
-        <p class="description">AZAR membuat tas serut sablon yang bisa kamu request sendiri. Cocok untuk pelajar, kelas, komunitas, dan acara spesialmu.</p>
-        <div class="actions"><a class="button-primary" href="https://wa.me/62887435013823" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Pesan lewat WhatsApp</a><a class="button-secondary" href="#produk">Lihat produk <i class="bi bi-arrow-down"></i></a></div>
-        <ul class="points"><li><i class="bi bi-check2"></i> Harga ramah pelajar</li><li><i class="bi bi-check2"></i> Desain bisa request</li></ul>
-      </div>
-    </section>
-    <section class="brand-story section" id="tentang"><div><p class="eyebrow">Tentang AZAR</p><h2>Berawal dari karya grafika.</h2></div><p>AZAR dibangun dari keinginan untuk menghadirkan bisnis yang dekat dengan dunia grafika—mulai dari sablon hingga buku jahit. Saat ini, kami menghadirkan tas serut sablon custom yang praktis, terjangkau, dan dibuat untuk menampilkan identitasmu.</p></section>
-    <section class="section" id="produk"><p class="eyebrow">Produk kami</p><h2>Simple dipakai, bebas dikreasikan.</h2><div class="product-card"><div class="product-visual"><img src="../img/azartasserut.jpeg" alt="Tas serut sablon custom AZAR" style="width:100%; height:100%; object-fit:cover;"></div><div class="product-content"><p class="eyebrow">Produk unggulan</p><h3>Tas Serut Sablon Custom</h3><p>Tas ringan untuk membawa kebutuhan harian. Tambahkan desain, nama kelas, logo komunitas, atau visual favoritmu agar tas terasa lebih personal.</p><ul><li><i class="bi bi-palette2"></i> Desain sesuai request</li><li><i class="bi bi-people"></i> Cocok untuk kelas dan komunitas</li><li><i class="bi bi-wallet2"></i> Harga bersahabat untuk pelajar</li></ul><a href="https://wa.me/62887435013823" target="_blank" rel="noopener">Tanya &amp; pesan produk <i class="bi bi-arrow-up-right"></i></a></div></div></section>
-    <section class="section"><p class="eyebrow">Kenapa AZAR?</p><h2>Dibuat untuk ide yang ingin kamu tunjukkan.</h2><div class="grid benefits"><article><i class="bi bi-cash-coin"></i><h3>Ramah di kantong</h3><p>Solusi merchandise custom dengan harga yang disesuaikan untuk kebutuhan pelajar.</p></article><article><i class="bi bi-brush"></i><h3>Bisa request</h3><p>Punya desain sendiri? Sampaikan idemu dan wujudkan menjadi sablon tasmu.</p></article><article><i class="bi bi-stars"></i><h3>Punya karakter</h3><p>Setiap tas dapat menjadi media untuk menunjukkan kelas, komunitas, atau gayamu.</p></article></div></section>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AZAR — Tas serut sablon custom dengan harga ramah pelajar.">
+    <link rel="icon" href="../img/XlogoPortofolio.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>
+      AZAR — Tas Serut Sablon Custom
+    </title>
+  </head>
+  <body>
+    <canvas id="background-nodes" aria-hidden="true">
+    </canvas>
+    <header class="navbarcon">
+      <a href="#beranda" class="brand-name" aria-label="AZAR beranda">
+        AZAR
+        <span>
+          .
+        </span>
+      </a>
+      <nav class="navbar-actions" aria-label="Navigasi utama">
+        <a class="nav-link" href="#tentang">
+          Tentang
+        </a>
+        <a class="nav-link" href="#produk">
+          Produk
+        </a>
+        <!-- Tautan testimoni diaktifkan kembali saat ulasan pelanggan sudah tersedia. -->
+        <a class="navbartext" href="https://wa.me/62887435013823" target="_blank" rel="noopener">
+          Pesan Sekarang
+        </a>
+      </nav>
+    </header>
+    <main id="beranda">
+      <section class="hero-promo">
+        <div class="hero-promo__content">
+          <p class="eyebrow">
+            Tas serut sablon custom
+          </p>
+          <h1>
+            Bawa gayamu
+            <br>
+            ke mana saja.
+          </h1>
+          <p class="description">
+            AZAR membuat tas serut sablon yang bisa kamu request sendiri. Cocok untuk pelajar, kelas, komunitas, dan acara spesialmu.
+          </p>
+          <div class="actions">
+            <a class="button-primary" href="https://wa.me/62887435013823" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp">
+              </i>
+              Pesan lewat WhatsApp
+            </a>
+            <a class="button-secondary" href="#produk">
+              Lihat produk
+              <i class="bi bi-arrow-down">
+              </i>
+            </a>
+          </div>
+          <ul class="points">
+            <li>
+              <i class="bi bi-check2">
+              </i>
+              Harga ramah pelajar
+            </li>
+            <li>
+              <i class="bi bi-check2">
+              </i>
+              Desain bisa request
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="brand-story section" id="tentang">
+        <div>
+          <p class="eyebrow">
+            Tentang AZAR
+          </p>
+          <h2>
+            Berawal dari karya grafika.
+          </h2>
+        </div>
+        <p>
+          AZAR dibangun dari keinginan untuk menghadirkan bisnis yang dekat dengan dunia grafika, mulai dari sablon hingga buku jahit. Saat ini, kami menghadirkan tas serut sablon custom yang praktis, terjangkau, dan dibuat untuk menampilkan identitasmu.
+        </p>
+      </section>
+      <section class="section" id="produk">
+        <p class="eyebrow">
+          Produk kami
+        </p>
+        <h2>
+          Simple dipakai, bebas dikreasikan.
+        </h2>
+        <div class="product-card">
+          <div class="product-visual">
+            <img src="../img/azartasserut.jpeg" alt="Tas serut sablon custom AZAR" style="width:100%; height:100%; object-fit:cover;">
+          </div>
+          <div class="product-content">
+            <p class="eyebrow">
+              Produk unggulan
+            </p>
+            <h3>
+              Tas Serut Sablon Custom
+            </h3>
+            <p>
+              Tas ringan untuk membawa kebutuhan harian. Tambahkan desain, nama kelas, logo komunitas, atau visual favoritmu agar tas terasa lebih personal.
+            </p>
+            <ul>
+              <li>
+                <i class="bi bi-palette2">
+                </i>
+                Desain sesuai request
+              </li>
+              <li>
+                <i class="bi bi-people">
+                </i>
+                Cocok untuk kelas dan komunitas
+              </li>
+              <li>
+                <i class="bi bi-wallet2">
+                </i>
+                Harga bersahabat untuk pelajar
+              </li>
+            </ul>
+            <a href="https://wa.me/62887435013823" target="_blank" rel="noopener">
+              Tanya &amp; pesan produk
+              <i class="bi bi-arrow-up-right">
+              </i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <p class="eyebrow">
+          Kenapa AZAR?
+        </p>
+        <h2>
+          Dibuat untuk ide yang ingin kamu tunjukkan.
+        </h2>
+        <div class="grid benefits">
+          <article>
+            <i class="bi bi-cash-coin">
+            </i>
+            <h3>
+              Ramah di kantong
+            </h3>
+            <p>
+              Solusi merchandise custom dengan harga yang disesuaikan untuk kebutuhan pelajar.
+            </p>
+          </article>
+          <article>
+            <i class="bi bi-brush">
+            </i>
+            <h3>
+              Bisa request
+            </h3>
+            <p>
+              Punya desain sendiri? Sampaikan idemu dan wujudkan menjadi sablon tasmu.
+            </p>
+          </article>
+          <article>
+            <i class="bi bi-stars">
+            </i>
+            <h3>
+              Punya karakter
+            </h3>
+            <p>
+              Setiap tas dapat menjadi media untuk menunjukkan kelas, komunitas, atau gayamu.
+            </p>
+          </article>
+        </div>
+      </section>
+      <!-- Bagian testimoni disembunyikan sementara hingga ulasan pelanggan tersedia.
     <section class="section testimonials" id="testimoni"><p class="eyebrow">Kata pelanggan</p><h2>Testimoni akan hadir di sini.</h2><div class="grid"><article><i class="bi bi-chat-quote"></i><p>Tambahkan cerita pelanggan tentang pengalaman memesan di AZAR.</p><span>Nama pelanggan · Produk yang dipesan</span></article><article><i class="bi bi-chat-quote"></i><p>Tambahkan cerita pelanggan tentang kualitas dan hasil sablon tasnya.</p><span>Nama pelanggan · Produk yang dipesan</span></article><article><i class="bi bi-chat-quote"></i><p>Tambahkan cerita pelanggan tentang desain request mereka.</p><span>Nama pelanggan · Produk yang dipesan</span></article></div></section>
-    <section class="cta"><p class="eyebrow">Mulai pesan</p><h2>Punya ide untuk tasmu?</h2><p>Kirim desain atau ceritakan kebutuhanmu melalui WhatsApp. AZAR siap membantu mewujudkannya.</p><a class="button-primary" href="https://wa.me/62887435013823" target="_blank" rel="noopener"><i class="bi bi-whatsapp"></i> Hubungi AZAR</a></section>
-  </main>
-  <footer><div><a class="brand-name" href="#beranda">AZAR<span>.</span></a><p>© 2026 AZAR. Tas serut sablon custom.</p></div></footer>
-  <script src="script.js"></script>
-</body>
+    -->
+      <section class="cta">
+        <p class="eyebrow">
+          Mulai pesan
+        </p>
+        <h2>
+          Punya ide untuk tasmu?
+        </h2>
+        <p>
+          Kirim desain atau ceritakan kebutuhanmu melalui WhatsApp. AZAR siap membantu mewujudkannya.
+        </p>
+        <a class="button-primary" href="https://wa.me/62887435013823" target="_blank" rel="noopener">
+          <i class="bi bi-whatsapp">
+          </i>
+          Hubungi AZAR
+        </a>
+      </section>
+    </main>
+    <footer>
+      <div>
+        <a class="brand-name" href="#beranda">
+          AZAR
+          <span>
+            .
+          </span>
+        </a>
+        <p>
+          © 2026 AZAR. Tas serut sablon custom.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js">
+    </script>
+  </body>
 </html>
